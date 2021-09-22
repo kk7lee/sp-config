@@ -11,11 +11,7 @@ eureka:
       defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
       
 zuul:
-  retryable: true #开启重试功能
-#  routes:
-#    item-service: /item-service/**
-#    user-service: /user-service/**
-#    order-service: /order-service/**
+  retryable: true 
 
 ribbon:
   ConnectTimeout: 1000
@@ -23,7 +19,6 @@ ribbon:
   MaxAutoRetriesNextServer: 1
   MaxAutoRetries: 1
   
-#降低 hystrix 超时时间，以便测试降级
 hystrix:
   command:
     default:
